@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class Palabra{
+	
+	public static void main(String[] args) {
+		String palabra;
+		char letra;
+		Scanner teclado = new Scanner(System.in);
+		System.out.print("Introduzca un texto");
+		palabra = teclado.nextLine();
+		System.out.println(palabra);
+		Scanner teclado1 = new Scanner (System.in);
+		System.out.print("Introduzca una letra");
+		letra = teclado1.next().charAt(0);
+		System.out.println(letra);
+		
+		int largo = palabra.length();
+		
+		if(largo < 5) {
+			System.out.println("La frase tiene menos de 5 caracteres");
+		} else if (largo < 15) {
+			System.out.println("La frase tiene entre 5 y 15 caracteres");
+		} else if (largo > 15) {
+			System.out.println("La frase tiene mas de 15 caracteres");
+		}
+		
+			char k = letra;
+			char l = palabra.charAt(0);
+			
+			if (l == k) {
+				System.out.println("La frase comienza con la misma letra introducida");
+			} else {
+				System.out.println("La frase NO comienza con la misma letra introducida");
+			}
+	}
+}
